@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  proyecto-backend-microservicio:
+    container_name: proyecto-backend-microservicio
+    image: proyecto-backend-microservicio:v1
+    build:
+      context: .
+    ports:
+      - "4001:4001"
+    networks:
+      - proyecto-app-backend
+networks:
+  proyecto-app-backend:
