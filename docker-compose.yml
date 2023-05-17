@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  proyecto-backend-monolotico:
+    container_name: proyecto-backend-monolotico
+    image: proyecto-backend-monolotico:v1
+    build:
+      context: .
+    ports:
+      - "4000:4000"
+    networks:
+      - proyecto-app-backend
+networks:
+  proyecto-app-backend:
